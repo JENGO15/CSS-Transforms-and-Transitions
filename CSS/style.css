@@ -1,0 +1,503 @@
+Header {
+  margin-top: 0%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30% 0 50px;
+  flex-wrap: nowrap;
+  text-decoration: none;
+  list-style: none;
+}
+
+#menu-btn {
+  display: none; /* Oculta el botón de menú en pantallas grandes */
+}
+
+.menu-icon {
+  cursor: pointer;
+  display: none;
+  font-size: 2em;
+  padding: 10px;
+}
+
+/* Estilos para el menú de opciones */
+.menu-options {
+  display: flex; /* Muestra la lista de opciones en línea */
+  justify-content: center; /* Centra las opciones horizontalmente */
+  
+}
+
+.menu-options li {
+  margin: 0 10px; /* Espacio entre las opciones */
+  list-style: none;
+}
+
+.title {
+  text-decoration: none;
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 16px;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  cursor: pointer;
+}
+
+
+
+.menu-options a {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+  
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: rgb(255, 255, 255);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
+
+@media  screen and (max-width: 768px) {
+
+  header{
+    padding: 20px 5% 0 50px;
+  }
+
+
+  /* Mostrar el botón de menú */
+  #menu-btn {
+    display: none;
+    
+  }
+  a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: rgb(0, 0, 0);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  a:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+
+  /* Mostrar el icono de menú */
+  .menu-icon {
+    display: grid;
+    color: #ffffff;
+    place-content:flex-end;
+  }
+
+  /* Ocultar el menú de opciones */
+  .menu-options {
+    display: none;
+    position: absolute;
+    top: 60px; /* Altura del botón de menú */
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding: 10px;
+    background-color:white ;
+    border-bottom: 1px solid #ccc;
+  }
+
+.menu-options a{
+    color: black;
+}  /* Mostrar el menú de opciones cuando se haga clic en el icono de menú */
+#menu-btn:checked ~ .menu-options {
+    display: block;
+}
+
+  /* Estilos adicionales para las opciones del menú */
+.menu-options li {
+    margin: 10px 0; /* Espacio entre las opciones */
+    color: transparent;
+}
+
+  
+.Main{
+  height: auto;
+}
+ .flex-main-container {
+  height:auto;
+  
+ }
+
+.flex-main-container{
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+    flex-wrap: wrap;
+   
+
+}
+
+.Main #BtnRead{
+  margin: 0px;
+  padding: 0px;
+}
+
+.footer_items p{
+  grid-column-start:2;
+  grid-column-end: 2;
+  justify-self: center;
+  text-align: center;
+ 
+}
+
+.Footer .footer_items #p1{
+  margin-left: 0px;
+
+}
+
+
+.Footer .footer_items{
+  height: auto;
+  background-color: #464547;
+  
+  
+}
+
+
+
+}
+
+/* FIN MEDIA QUERY */
+
+.Hero {
+
+  width: 100vw;
+  height: 822px;
+  text-align: center;
+  background-image: url(/assets/Desktop_Backgrounds_1920x1200_6\ 3.png);
+}
+
+.contenedor_textoHero{
+  display: flex;
+  flex-wrap: nowrap;
+
+  align-items: center;
+  align-content: center;
+  flex-direction: column; 
+
+
+  width: 100vw;
+  height: 100vh;
+  
+  text-align: center;
+  padding-top: 10%;
+  height:80%;
+}
+
+.imagenlogo {
+
+  margin-left: auto;
+  margin-right: auto;
+ transition: transform 0.5s;
+}
+  .imagenlogo:hover {
+      transform: rotateY(180deg) scale(1.2);
+    }
+
+
+.Hero h1 {
+  /* display: block; */
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.Hero h2 {
+  /* display: block; */
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+ 
+
+  text-align: center;
+
+  color: rgba(255, 255, 255, 0.7);
+
+}
+
+.Main {
+
+  width: 100vw;
+  height: auto;
+  /* flex-wrap: nowrap; */
+
+  justify-content: center;
+ 
+  text-align: center;
+  background: #eeeeee;
+}
+
+.Main h2 {
+  height: 119px;
+  /* top: 100px; */
+  margin-top: 0%;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+  
+  text-align: center;
+
+  color: #464547;
+
+  padding-top: 40px;
+}
+
+.Main h3 {
+
+  height: 57px;
+  top: 1046px;
+
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+ 
+
+  text-align: center;
+
+  color: #666666;
+}
+
+.Main #pm1 {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 5px;
+  padding: 5%;
+  text-align: justify;
+
+  color: #000000;
+}
+.Main #pm2 {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 5px;
+  padding: 5%;
+  text-align: justify;
+
+  color: #000000;
+}
+
+.flex-main-container{
+  display: flex; 
+  flex-direction: row;
+  
+  justify-content: center; 
+  
+}
+
+
+
+
+.Main #BtnRead {
+  margin: 25px;
+  height: 36px;
+  width: 115px;
+  border-radius: 18px;
+  background: #55c2d8;
+  text-align: center;
+  color: white;
+
+  font-family: "Oswald Regular";
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+#BtnRead:hover {
+  transform: rotateZ(15deg);
+}
+
+
+
+.Learn_more {
+  display: grid;
+  place-content: center;
+  width: 100vw;
+  height: 637px;
+  background-image: url(/assets/Learn-more.png);
+}
+
+.Learn_more h2 {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.Learn_more #BtnPlay {
+  place-self: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  font-size: 70px;
+  text-align: center;
+  background: #39c2d7;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+ 
+}
+#BtnPlay:hover{
+  transform: scale(0.9);
+  color: #39c2d7;
+  background-color: #ffffff;
+}
+
+.Learn_more h3 {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+
+  text-align: center;
+  color: #ffffff;
+}
+
+.Footer {
+  width: 100vw;
+  height: 100px;
+  padding-top: 30px;
+  background: #464547;
+}
+
+.Footer a{
+  font-family: 'Source Sans Pro';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+color: rgba(255, 255, 255, 0.4);
+text-decoration: none;
+}
+
+ 
+.Footer #p1 {
+
+  margin-left: 30px;
+
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 16px;
+
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  align-self: top;
+
+
+
+}
+
+
+
+.Footer #p2 {
+
+  margin-top: 0%;
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  align-items: start;
+  text-align: left;
+
+}
+
+
+
+.Footer #p3 {
+
+
+  margin-top: 0%;
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  align-self: end;
+  text-align: center;
+
+ 
+}
+
+
+
+.footer_items  {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  /* grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); */
+  justify-content: space-between;
+  grid-auto-flow: dense;
+}
+
